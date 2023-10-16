@@ -41,10 +41,7 @@ function EditProfile() {
       body: dataToSend,
     };
 
-    let JSONData = await fetch(
-      "http://localhost:1234/udpateDetails",
-      reqOptions
-    );
+    let JSONData = await fetch("/udpateDetails", reqOptions);
 
     let JSOData = await JSONData.json();
 

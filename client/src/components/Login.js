@@ -9,8 +9,9 @@ function Login() {
   let navigate = useNavigate();
 
   useEffect(() => {
-    axios.defaults.baseURL = "http://localhost:1234";
-    axios.defaults.headers.common['Authorization'] = localStorage.getItem("token");
+    axios.defaults.baseURL = "";
+    axios.defaults.headers.common["Authorization"] =
+      localStorage.getItem("token");
     emailInputRef.current.value = localStorage.getItem("email");
     passwordInputRef.current.value = localStorage.getItem("password");
     //validateCredentials();
